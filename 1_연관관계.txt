@@ -15,7 +15,7 @@
 					  @OneToMany : LAZY
 					  
 					 - EAGER : 연관 엔티티를 동시에 조회
-					 - LAZY : 연관 앤티티를 실제 사용할 때 조회
+					 - LAZY  : 연관 앤티티를 실제 사용할 때 조회
 					 
 		- cascade	: 연관엔티티를 같이 저장하거나 삭제 할 때
 	
@@ -68,6 +68,8 @@
 		
 			[참고] fetch 속성 : 연관관계에 있는 객체를 가져오는 시점
 					- EAGER / LAZY
+						# EAGER : 조인해서 모든 값 가져옴
+						# LAZY  : 최대한 조인 하지 않고 필요한 정보만 가져옴
 					
 				- Employee.java 에서 	@ManyToOne(optional=false, fetch=FetchType.LAZY)
 				- MainApp.java 에서 아래 문장을 주석달고/ 주석지우고 각각 확인
